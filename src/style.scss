@@ -1,0 +1,233 @@
+:root {
+  --main-color: #0b0b0b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%),
+    url("https://bit.ly/2E3scwW");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    form {
+      width: 300px;
+      height: 300px;
+      padding: 30px;
+      border-radius: 5px;
+      background-color: var(--main-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      input {
+        height: 40px;
+        border-radius: 5px;
+        background-color: gray;
+        color: white;
+        padding-left: 10px;
+
+        &::placeholder {
+          color: lightgray;
+        }
+      }
+
+      button {
+        height: 40px;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Home */
+.home {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+  //   scrolled gets added to navbar if offsetY > 0
+  &.scrolled {
+    background-color: var(--main-color);
+  }
+
+  // container
+  .container {
+    padding: 0 50px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          transform: scale(1.3);
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      .logo {
+        height: 50px;
+        margin-right: 40px;
+        cursor: pointer;
+        // filter: brightness();
+        &:hover {
+          transform: scale(1.3);
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      span {
+        margin-right: 25px;
+        cursor: pointer;
+        font-size: 24px;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .navbarImg {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .logout-btn {
+        background-color: rgb(115, 110, 110);
+        border: 2px solid white;
+        width: 80px;
+        padding: 10px 5px;
+        cursor: pointer;
+        color: white;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 2rem;
+
+        &:hover {
+          background-color: white;
+          outline: black;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+/* Movie Item */
+
+.movie-item {
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-out;
+  }
+}
+
+/* Single show */
+
+.singleShow {
+  display: flex;
+  margin: 2rem 0rem;
+
+  img {
+    margin-left: 2rem;
+    margin-right: 5rem;
+    width: 50%;
+    height: 80vh;
+  }
+
+  .singleShow__info {
+    p {
+        width: 50%;
+      margin: 1rem 0rem;
+    }
+
+    .singleShow__genre {
+      display: inline-block;
+      border-radius: 15px;
+      margin: 0.5rem 1rem 0.5rem 0;
+      padding: 10px 17px;
+      background-color: green;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease-out;
+      }
+    }
+    .singleShow__booking-btn {
+      background-color: black;
+      border: 2px solid white;
+      padding: 10px 17px;
+      cursor: pointer;
+      color: white;
+      margin-top: 3rem;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease-out;
+      }
+    }
+  }
+}
+
+/* Movies List */
+
+.moviesList{
+    margin-top: 5rem;
+}
